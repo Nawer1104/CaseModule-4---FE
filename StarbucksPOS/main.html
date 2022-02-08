@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Starbucks Coffee Company - Point Of Sale</title>
+    <link rel="shortcut icon" type="image/png" href="https://firebasestorage.googleapis.com/v0/b/casemodule4-b9134.appspot.com/o/images%2Fcore-image%2Flogo_tcm90-366_w1024_n.png?alt=media&token=fe804cfc-53f2-4891-a5c6-abd5a17cf2a0"/>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.18/css/jquery.dataTables.css"/>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.18/js/jquery.dataTables.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.1.4/pagination.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.1.4/pagination.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader d-flex align-items-center justify-content-center">
+        <div class="lds-ellipsis">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <header class="header-area">
+        <!-- Navbar Area -->
+        <div class="oneMusic-main-menu">
+            <div class="classy-nav-container breakpoint-off">
+                <div class="container">
+
+                    <nav class="classy-navbar justify-content-between" id="oneMusicNav">
+
+                        <a href="index.html" class="nav-brand"><img src="https://firebasestorage.googleapis.com/v0/b/casemodule4-b9134.appspot.com/o/images%2Fcore-image%2Flogo_tcm90-366_w1024_n.png?alt=media&token=fe804cfc-53f2-4891-a5c6-abd5a17cf2a0" alt=""></a>
+
+                        <div class="classy-navbar-toggler">
+                            <span class="navbarToggler"><span></span><span></span><span></span></span>
+                        </div>
+
+                        <div class="classy-menu">
+                            <div class="classycloseIcon">
+                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                            </div>
+                            <!-- Nav Start -->
+                            <div class="classynav">
+                                <!-- Login/Register & Cart Button -->
+                                <div class="login-register-cart-button d-flex align-items-center">
+                                    <!-- Login/Register -->
+
+                                    <div class="header__navbar-item header__navbar-user">
+
+
+                                        <div id="userName" class="login-register-btn mr-50">
+                                            <img id="userAvatar">
+                                            <a id="nameOfUser" href="/">Name</a>
+                                        </div>
+
+                                        <div id="login" class="login-register-btn mr-50">
+                                            <a href="login.html">Login</a>
+                                        </div>
+
+                                        <div id="logout" class="login-register-btn mr-50">
+                                            <a onclick="logout()">Log Out</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ##### Breadcumb Area Start ##### -->
+    <section class="breadcumb-area bg-img" style="background-image: url(https://firebasestorage.googleapis.com/v0/b/casemodule4-b9134.appspot.com/o/images%2Fcore-image%2Fbackgroundimg.jpg?alt=media&token=cf94a367-ce19-49f3-b0d6-5329f486bab7); height: 700px;">
+        <div class="bradcumbContent">
+            <p>See what’s new</p>
+            <h2>All Product Page</h2>
+        </div>
+    </section>
+    <!-- ##### Breadcumb Area End ##### -->
+
+    <!-- ##### Album Catagory Area Start ##### -->
+    <section class="album-catagory section-padding-100-0">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="browse-by-catagories catagory-menu d-flex flex-wrap align-items-center mb-70">
+                        <a onclick="pageProduct()" style="-webkit-user-select: none;" class="active">Browse All</a>
+                        <a onclick="searchByCate_Id(1)" style="-webkit-user-select: none;">Espresso</a>
+                        <a onclick="searchByCate_Id(4)" style="-webkit-user-select: none;" >Frappucino</a>
+                        <a onclick="searchByCate_Id(2)" style="-webkit-user-select: none;">Tea</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row oneMusic-albums" id="list">
+                <!-- Single Album -->
+            </div>
+
+        </div>
+    </section>
+    <!-- ##### Album Catagory Area End ##### -->
+
+    <div class="container-fluid pt-5">
+        <div class="row px-xl-5">
+            <div class="col-lg-8 table-responsive mb-5">
+                <table class="table table-bordered text-center mb-0">
+                    <thead class="bg-secondary text-dark">
+                    <tr>
+                        <th>Products</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Total</th>
+                        <th>Remove</th>
+                    </tr>
+                    </thead>
+                    <tbody class="align-middle" id="cart">
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-lg-4">
+                <div class="mb-5">
+                    <div class="input-group">
+                        <input type="text" class="form-control p-4" placeholder="Discount Coupon" id="discount">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary" style="position: relative; height: auto;" onclick="applyCoupon()">Apply Coupon</button>
+                        </div>
+                    </div>
+                    <span id="mess" style="color: #ef3d3d"></span><br>
+                    <span id="messSuccess" style="color: #79e356"></span><br>
+                </div>
+                <div class="card border-secondary mb-5">
+                    <div class="card-header bg-secondary border-0">
+                        <h4 class="font-weight-semi-bold m-0">Summary</h4>
+                    </div>
+                    <div class="card-footer border-secondary bg-transparent">
+                        <div class="d-flex justify-content-between mt-2">
+                            <h5 class="font-weight-bold">Total</h5>
+                            <h5 class="font-weight-bold"><span id="totalAmount"></span><span> VND</span></h5>
+                        </div>
+                        <!-- Button trigger modal -->
+                        <button class="btn btn-block btn-primary my-3" data-toggle="modal" data-target="#checkOutModal">Proceed To Checkout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Check Out -->
+    <div class="modal fade" id="checkOutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="card border-secondary mb-5">
+                    <div class="card-header bg-secondary border-0">
+                        <h4 class="font-weight-semi-bold m-0">Order Detail</h4>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="font-weight-medium mb-3" id="modalProducts">Products</h5>
+
+                    </div>
+                    <div class="card-footer border-secondary bg-transparent">
+                        <div class="d-flex justify-content-between mt-2">
+                            <h5 class="font-weight-bold">Total</h5>
+                            <h5 class="font-weight-bold" id="totalAmountOnModal"></h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="card border-secondary mb-5">
+                    <div class="card-header bg-secondary border-0">
+                        <h4 class="font-weight-semi-bold m-0">Payment:</h4>
+                    </div>
+                    <div class="input-group">
+                        <input type="number" class="form-control p-4" placeholder="xxx.xxx VND" id="payment" onchange="changeCalculator()">
+                    </div>
+                    <div class="card-header bg-secondary border-0">
+                        <h4 class="font-weight-semi-bold m-0">Change: <span id="changeView" style="color: #4747e8"></span></h4>
+                    </div>
+                    <div class="card-footer border-secondary bg-transparent">
+                        <button class="btn btn-lg btn-block btn-primary font-weight-bold my-3 py-3" style="height: 60px" onclick="checkOut()">Check Out</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ##### Contact Area Start ##### -->
+    <section class="contact-area section-padding-100 bg-img bg-overlay bg-fixed has-bg-img" style="background-image: url(img/bg-img/bg-n-2.jpg);">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-heading white">
+                        <h2>Career Center</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <!-- Contact Form Area -->
+                    <div class="contact-form-area">
+                        <form action="#" method="post">
+                            <div class="row">
+                                <div class="col-md-6 col-lg-4">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="name" placeholder="Name">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-4">
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" id="email" placeholder="E-mail">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="subject" placeholder="Subject">
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <textarea name="message" class="form-control" id="message" cols="30" rows="10" placeholder="Message"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-12 text-center">
+                                    <button class="btn oneMusic-btn mt-30" type="submit">Send <i class="fa fa-angle-double-right"></i></button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ##### Contact Area End ##### -->
+
+    <!-- ##### Footer Area Start ##### -->
+    <footer class="footer-area">
+        <div class="container">
+            <div class="row d-flex flex-wrap align-items-center">
+                <div class="col-12 col-md-6">
+                    <a href="index.html"><img src="https://firebasestorage.googleapis.com/v0/b/casemodule4-b9134.appspot.com/o/images%2Fcore-image%2Flogo_tcm90-366_w1024_n.png?alt=media&token=fe804cfc-53f2-4891-a5c6-abd5a17cf2a0" alt=""></a>
+                    <p class="copywrite-text"><a href="#"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> for Starbucks Coffee Company by <a href="https://www.facebook.com/aogiac.lag/" target="_blank">Nawer</a>
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+    <script src="js/bootstrap/popper.min.js"></script>
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <script src="js/plugins/plugins.js"></script>
+    <script src="js/active.js"></script>
+    <script src="js/main/main.js"></script>
+</body>
+</html>

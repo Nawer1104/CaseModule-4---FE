@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords"
+          content="wrappixel, admin dashboard, html css dashboard, web dashboard, bootstrap 5 admin, bootstrap 5, css3 dashboard, bootstrap 5 dashboard, Ample lite admin bootstrap 5 dashboard, frontend, responsive bootstrap 5 admin template, Ample admin lite dashboard bootstrap 5 dashboard template">
+    <meta name="description"
+          content="Ample Admin Lite is powerful and clean admin dashboard template, inpired from Bootstrap Framework">
+    <meta name="robots" content="noindex,nofollow">
+    <title>Ample Admin Lite Template by WrapPixel</title>
+    <link rel="canonical" href="https://www.wrappixel.com/templates/ample-admin-lite/" />
+    <link rel="shortcut icon" type="image/png" href="https://firebasestorage.googleapis.com/v0/b/casemodule4-b9134.appspot.com/o/images%2Fcore-image%2Flogo_tcm90-366_w1024_n.png?alt=media&token=fe804cfc-53f2-4891-a5c6-abd5a17cf2a0"/>
+    <link href="manage/css/style.min.css" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+
+</head>
+
+<body>
+
+    <div class="preloader">
+        <div class="lds-ripple">
+            <div class="lds-pos"></div>
+            <div class="lds-pos"></div>
+        </div>
+    </div>
+
+    <div id="main-wrapper" data-layout="vertical" data-navbarbg="skin5" data-sidebartype="full"
+        data-sidebar-position="absolute" data-header-position="absolute" data-boxed-layout="full">
+
+        <header class="topbar" data-navbarbg="skin5">
+            <nav class="navbar top-navbar navbar-expand-md navbar-dark">
+                <div class="navbar-header" data-logobg="skin6">
+
+                    <a class="navbar-brand" href="beverage-manage.html">
+                        <!-- Logo icon -->
+                        <b class="logo-icon">
+                            <a href="index.html">
+                                <img src="https://firebasestorage.googleapis.com/v0/b/casemodule4-b9134.appspot.com/o/images%2Fcore-image%2Flogo_tcm90-366_w1024_n.png?alt=media&token=fe804cfc-53f2-4891-a5c6-abd5a17cf2a0" alt="homepage" />
+                            </a>
+                        </b>
+                    </a>
+
+                    <a class="nav-toggler waves-effect waves-light text-dark d-block d-md-none"
+                        href="javascript:void(0)"><i class="ti-menu ti-close"></i></a>
+                </div>
+
+                <div class="navbar-collapse collapse" id="navbarSupportedContent" data-navbarbg="skin5">
+                    <ul class="navbar-nav d-none d-md-block d-lg-none">
+                        <li class="nav-item">
+                            <a class="nav-toggler nav-link waves-effect waves-light text-white"
+                                href="javascript:void(0)"><i class="ti-menu ti-close"></i></a>
+                        </li>
+                    </ul>
+
+                    <ul class="navbar-nav ms-auto d-flex align-items-center">
+
+                        <li>
+                            <a class="profile-pic" href="#">
+                                <img id="userAvatar" alt="user-img" width="36"
+                                    class="img-circle"><span id="nameOfUser" class="text-white font-medium"></span></a>
+                        </li>
+
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <aside class="left-sidebar" data-sidebarbg="skin6">
+            <!-- Sidebar scroll-->
+            <div class="scroll-sidebar">
+                <!-- Sidebar navigation-->
+                <nav class="sidebar-nav">
+                    <ul id="sidebarnav">
+                        <!-- User Profile-->
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="profile.html"
+                               aria-expanded="false">
+                                <i class="fa fa-user" aria-hidden="true"></i>
+                                <span class="hide-menu">Profile Admin</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item pt-2">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="beverage-manage.html"
+                               aria-expanded="false">
+                                <i class="far fa-clock" aria-hidden="true"></i>
+                                <span class="hide-menu">Beverage Manage</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="partner-manage.html"
+                               aria-expanded="false">
+                                <i class="fa fa-table" aria-hidden="true"></i>
+                                <span class="hide-menu">Partner Manage</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                </nav>
+                <!-- End Sidebar navigation -->
+            </div>
+            <!-- End Sidebar scroll-->
+        </aside>
+
+        <div class="page-wrapper">
+
+            <div class="page-breadcrumb bg-white">
+                <div class="row align-items-center">
+                    <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+                        <h4 class="page-title">Admin Profile</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-fluid">
+
+                <!-- Row -->
+                <div class="row">
+                    <!-- Column -->
+                    <div class="col-lg-4 col-xlg-3 col-md-12">
+                        <div class="white-box">
+                            <div class="user-bg"> <img width="100%" alt="user" src="https://firebasestorage.googleapis.com/v0/b/casemodule4-b9134.appspot.com/o/images%2Fcore-image%2Fphoto-1548364538-60b952c308b9.jpg?alt=media&token=a9a733ef-28b8-45c3-acde-a6faaa8f3bcd">
+                                <div class="overlay-box">
+                                    <div class="user-content">
+                                        <img id="userAvatarContext" style="width: 90px">
+                                        <h4 class="text-white mt-2" id="userNameContext"></h4>
+                                        <h5 class="text-white mt-2" id="userEmailContext"></h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Column -->
+                    <!-- Column -->
+                    <div class="col-lg-8 col-xlg-9 col-md-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <form class="form-horizontal form-material">
+                                    <input type="number" hidden id="userIdNumber">
+                                    <input type="text" hidden id="userAvatarEdit">
+                                    <div class="form-group mb-4">
+                                        <label class="col-md-12 p-0">Full Name:</label>
+                                        <div class="col-md-12 border-bottom p-0">
+                                            <input type="text" id="userNickName" class="form-control p-0 border-0"> </div>
+                                    </div>
+                                    <div class="form-group mb-4">
+                                        <label class="col-md-12 p-0">Id Number:</label>
+                                        <div class="col-md-12 border-bottom p-0">
+                                            <input type="number" id="userId" class="form-control p-0 border-0" readonly> </div>
+                                    </div>
+                                    <div class="form-group mb-4">
+                                        <label for="example-email" class="col-md-12 p-0">Email:</label>
+                                        <div class="col-md-12 border-bottom p-0">
+                                            <input type="email" id="userEmail" class="form-control p-0 border-0" name="example-email"
+                                                id="example-email">
+                                        </div>
+                                    </div>
+                                    <div class="form-group mb-4">
+                                        <label class="col-md-12 p-0">Password:</label>
+                                        <div class="col-md-12 border-bottom p-0">
+                                            <input type="password" value="password" id="userPassWord" class="form-control p-0 border-0">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group mb-4">
+                                        <label class="col-sm-12">Title:</label>
+
+                                        <div class="col-sm-12 border-bottom" id="roles">
+
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="btn btn-info waves-effect waves-light">
+                                        <span>Upload Another Avatar</span>
+                                        <progress value="0" max="100" id="uploader">0%</progress>
+                                        <input type="file" class="upload" id="fileButton">
+                                    </div>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <div class="form-group mb-4">
+                                        <div class="col-sm-12">
+                                            <button class="btn btn-success" onclick="updateProfile()">Update Profile</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Column -->
+                </div>
+
+            </div>
+
+            <footer class="footer text-center"> 2021 © Ample Admin brought to you by <a
+                    href="https://www.wrappixel.com/">wrappixel.com</a>
+            </footer>
+
+        </div>
+
+    </div>
+
+    <script src="manage/plugins/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="manage/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="manage/js/app-style-switcher.js"></script>
+    <script src="manage/js/waves.js"></script>
+    <script src="manage/js/sidebarmenu.js"></script>
+    <script src="manage/js/custom.js"></script>
+    <script src="manage/js/pages/profile/profile.js"></script>
+</body>
+
+</html>

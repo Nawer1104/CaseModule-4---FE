@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1356f19f-4c6c-4ce0-b4f0-7891d5b5e9b6" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="ProjectId" id="24J0oqK84yuuRg1sACozKpNz31M" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../StarbucksPOS" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1356f19f-4c6c-4ce0-b4f0-7891d5b5e9b6" name="Changes" comment="" />
+      <created>1643333559996</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1643333559996</updated>
+      <workItem from="1643333561530" duration="599000" />
+      <workItem from="1643336043524" duration="19496000" />
+      <workItem from="1643423002373" duration="19898000" />
+      <workItem from="1643511693807" duration="14907000" />
+      <workItem from="1643595545658" duration="18356000" />
+      <workItem from="1643774010153" duration="8403000" />
+      <workItem from="1643793845281" duration="1340000" />
+      <workItem from="1643799149275" duration="74000" />
+      <workItem from="1643799325233" duration="5910000" />
+      <workItem from="1643849546249" duration="11503000" />
+      <workItem from="1643885157643" duration="3444000" />
+      <workItem from="1644156112669" duration="6476000" />
+      <workItem from="1644196000061" duration="26677000" />
+      <workItem from="1644245034673" duration="2845000" />
+      <workItem from="1644285094026" duration="1188000" />
+      <workItem from="1644286306392" duration="10000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

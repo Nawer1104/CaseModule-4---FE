@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Starbucks Coffee Company - Point Of Sale</title>
+    <link rel="shortcut icon" type="image/png" href="https://firebasestorage.googleapis.com/v0/b/casemodule4-b9134.appspot.com/o/images%2Fcore-image%2Flogo_tcm90-366_w1024_n.png?alt=media&token=fe804cfc-53f2-4891-a5c6-abd5a17cf2a0"/>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.18/css/jquery.dataTables.css"/>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.18/js/jquery.dataTables.js"></script>
+</head>
+
+<body>
+<!-- Preloader -->
+<div class="preloader d-flex align-items-center justify-content-center">
+    <div class="lds-ellipsis">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</div>
+
+<!-- ##### Header Area Start ##### -->
+<header class="header-area">
+    <!-- Navbar Area -->
+    <div class="oneMusic-main-menu">
+        <div class="classy-nav-container breakpoint-off">
+            <div class="container">
+
+                <nav class="classy-navbar justify-content-between" id="oneMusicNav">
+
+                    <a href="index.html" class="nav-brand"><img src="https://firebasestorage.googleapis.com/v0/b/casemodule4-b9134.appspot.com/o/images%2Fcore-image%2Flogo_tcm90-366_w1024_n.png?alt=media&token=fe804cfc-53f2-4891-a5c6-abd5a17cf2a0" alt=""></a>
+
+                    <div class="classy-navbar-toggler">
+                        <span class="navbarToggler"><span></span><span></span><span></span></span>
+                    </div>
+
+                    <div class="classy-menu">
+                        <div class="classycloseIcon">
+                            <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                        </div>
+                        <!-- Nav Start -->
+                        <div class="classynav">
+                            <!-- Login/Register & Cart Button -->
+                            <div class="login-register-cart-button d-flex align-items-center">
+                                <!-- Login/Register -->
+
+                                <div class="header__navbar-item header__navbar-user">
+
+
+                                    <div id="userName" class="login-register-btn mr-50">
+                                        <img id="userAvatar">
+                                        <a id="nameOfUser" href="/">Name</a>
+                                    </div>
+
+                                    <div id="login" class="login-register-btn mr-50">
+                                        <a href="login.html">Login</a>
+                                    </div>
+
+                                    <div id="logout" class="login-register-btn mr-50">
+                                        <a onclick="logout()">Log Out</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- ##### Header Area End ##### -->
+
+<!-- ##### Hero Area Start ##### -->
+<section class="hero-area">
+    <div class="hero-slides owl-carousel">
+        <!-- Single Hero Slide -->
+
+        <div class="single-hero-slide d-flex align-items-center justify-content-center">
+            <!-- Slide Img -->
+            <div class="slide-img bg-img" style="background-image: url(img/bg-img/latte.jpg);"></div>
+            <!-- Slide Content -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="hero-slides-content text-center">
+                            <h6 data-animation="fadeInUp" data-delay="100ms">Must Try Beverage</h6>
+                            <h2 data-animation="fadeInUp" data-delay="300ms">Coffee Latte<span>Coffee Latte</span></h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="single-hero-slide d-flex align-items-center justify-content-center">
+            <!-- Slide Img -->
+            <div class="slide-img bg-img" style="background-image: url(img/bg-img/vsccb.jpg);"></div>
+            <!-- Slide Content -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="hero-slides-content text-center">
+                            <h6 data-animation="fadeInUp" data-delay="100ms">Must Try Beverage</h6>
+                            <h2 data-animation="fadeInUp" data-delay="300ms">Vanila Sweet Cream ColdBrew<span>Vanila Sweet Cream ColdBrew</span></h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<section class="featured-artist-area section-padding-100 bg-img bg-overlay bg-fixed" style="background-image: url(img/bg-img/bg-n-1.jpg);">
+    <div class="container">
+
+        <div class="row align-items-end">
+            <div class="col-12 col-md-12 col-lg-12">
+                <div class="featured-artist-content">
+                    <div class="section-heading white text-center mb-50">
+                        <h2>Our mission:</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row align-items-end">
+            <div class="col-12 col-md-12 col-lg-12">
+                <div class="featured-artist-content">
+                    <div class="section-heading white text-center mb-50">
+                        <h2>To inspire &</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row align-items-end">
+            <div class="col-12 col-md-12 col-lg-12">
+                <div class="featured-artist-content">
+                    <div class="section-heading white text-center mb-50">
+                        <h2>Nuture the human spirit -</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row align-items-end">
+            <div class="col-12 col-md-12 col-lg-12">
+                <div class="featured-artist-content">
+                    <div class="section-heading white text-center mb-50">
+                        <h2>One person,</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row align-items-end">
+            <div class="col-12 col-md-12 col-lg-12">
+                <div class="featured-artist-content">
+                    <div class="section-heading white text-center mb-50">
+                        <h2>One cup &</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row align-items-end">
+            <div class="col-12 col-md-12 col-lg-12">
+                <div class="featured-artist-content">
+                    <div class="section-heading white text-center mb-50">
+                        <h2>One neighborhood </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row align-items-end">
+            <div class="col-12 col-md-12 col-lg-12">
+                <div class="featured-artist-content">
+                    <div class="section-heading white text-center mb-50">
+                        <h2>At a Time!</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="events-area section-padding-100">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="single-event-area mb-30">
+                    <a href="main.html">
+                        <div class="event-text">
+                            <h4>Open New Sale</h4>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="single-event-area mb-30">
+                    <a href="report.html">
+                        <div class="event-text">
+                            <h4>Receipt Report</h4>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="single-event-area mb-30">
+                    <a href="income.html">
+                        <div class="event-text">
+                            <h4>Check Income</h4>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="single-event-area mb-30">
+                    <a href="profile.html">
+                        <div class="event-text">
+                            <h4>Management</h4>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="contact-area section-padding-100 bg-img bg-overlay bg-fixed has-bg-img" style="background-image: url(img/bg-img/bg-n-2.jpg);">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="section-heading white wow fadeInUp" data-wow-delay="100ms">
+                    <h2>Career Center</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <!-- Contact Form Area -->
+                <div class="contact-form-area">
+                    <form action="#" method="post">
+                        <div class="row">
+                            <div class="col-md-6 col-lg-4">
+                                <div class="form-group wow fadeInUp" data-wow-delay="100ms">
+                                    <input type="text" class="form-control" id="name" placeholder="Name">
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="form-group wow fadeInUp" data-wow-delay="200ms">
+                                    <input type="email" class="form-control" id="email" placeholder="E-mail">
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="form-group wow fadeInUp" data-wow-delay="300ms">
+                                    <input type="text" class="form-control" id="subject" placeholder="Subject">
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-group wow fadeInUp" data-wow-delay="400ms">
+                                    <textarea name="message" class="form-control" id="message" cols="30" rows="10" placeholder="Message"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-12 text-center wow fadeInUp" data-wow-delay="500ms">
+                                <button class="btn oneMusic-btn mt-30" type="submit">Send <i class="fa fa-angle-double-right"></i></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ##### Contact Area End ##### -->
+
+<!-- ##### Footer Area Start ##### -->
+<footer class="footer-area">
+    <div class="container">
+        <div class="row d-flex flex-wrap align-items-center">
+            <div class="col-12 col-md-6">
+                <a href="#"><img src="https://firebasestorage.googleapis.com/v0/b/casemodule4-b9134.appspot.com/o/images%2Fcore-image%2Flogo_tcm90-366_w1024_n.png?alt=media&token=fe804cfc-53f2-4891-a5c6-abd5a17cf2a0" alt=""></a>
+                <p class="copywrite-text"><a href="#"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> for Starbucks Coffee Company by <a href="https://www.facebook.com/aogiac.lag/" target="_blank">Nawer</a>
+                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="js/jquery/jquery-2.2.4.min.js"></script>
+<script src="js/bootstrap/popper.min.js"></script>
+<script src="js/bootstrap/bootstrap.min.js"></script>
+<script src="js/plugins/plugins.js"></script>
+<script src="js/active.js"></script>
+<script src="js/main/index.js"></script>
+</body>
+
+</html>
